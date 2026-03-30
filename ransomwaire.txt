@@ -1,0 +1,70 @@
+================================================================================
+SIMULATION 5 : RANSOMWARE SIMULÉ
+Date : 30/03/2026
+Cible : Windows 10 Client (10.10.10.40)
+================================================================================
+
+1. SCÉNARIO SIMULÉ :
+- Un attaquant exécute un ransomware sur un poste utilisateur
+- Les fichiers importants sont chiffrés (simulé par renommage)
+- Une note de rançon est laissée
+
+2. IMPACT SIMULÉ :
+
+| Type de fichier | Nombre | Impact |
+|-----------------|--------|--------|
+| Factures clients | 1 | Perte de données commerciales |
+| Plans de production | 1 | Interruption production |
+| Données clients | 1 | Fuite possible |
+| Rapports | 1 | Perte de traçabilité |
+| Configurations PLC | 1 | Arrêt des automates |
+
+3. TEMPS DE DÉTECTION ET RESTAURATION :
+
+| Étape | Temps simulé |
+|-------|--------------|
+| Détection | 15 minutes |
+| Isolation machine | 5 minutes |
+| Restauration depuis sauvegarde | 10 minutes |
+| Vérification | 5 minutes |
+
+4. LEÇONS APPRISES :
+
+✅ Ce qui a fonctionné :
+- Sauvegardes disponibles
+- Script de restauration fonctionnel
+- Procédure documentée
+
+❌ Ce qui a échoué :
+- Absence de détection automatique
+- Pare-feu désactivé
+- Aucun antivirus actif
+
+================================================================================
+RECOMMANDATIONS POUR TECHNOSITE INDUSTRIE :
+================================================================================
+
+1. SAUVEGARDES :
+   - Stratégie 3-2-1 : 3 copies, 2 supports différents, 1 hors site
+   - Sauvegardes air-gap (déconnectées du réseau)
+   - Tests de restauration réguliers
+
+2. PROTECTION :
+   - Antivirus/EDR sur tous les postes
+   - Application Whitelisting
+   - Restriction d'exécution de scripts PowerShell
+
+3. DÉTECTION :
+   - SIEM avec règles de détection ransomware
+   - Surveillance des renommements massifs de fichiers
+   - Alertes sur processus suspects
+
+4. RÉPONSE À INCIDENT :
+   - Plan de réponse documenté
+   - Exercices de simulation réguliers
+   - Isolation rapide des machines infectées
+
+5. FORMATION :
+   - Sensibilisation aux ransomwares
+   - Ne pas payer la rançon
+   - Signalement immédiat à l'équipe sécurité
